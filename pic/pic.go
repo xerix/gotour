@@ -10,7 +10,7 @@ func Pic(dx, dy int) [][]uint8 {
 
 	for y, row := range pic {
 		for x := range row {
-			row[x] = uint8((x + y) / 2)
+			row[x] = uint8((x * y) / (x + y))
 		}
 	}
 	return pic
